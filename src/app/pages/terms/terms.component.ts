@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './terms.component.scss'
 })
 export class TermsComponent {
-
+  acceptTerms(): void {
+    console.log('Termos aceitos!');
+  }
 }
