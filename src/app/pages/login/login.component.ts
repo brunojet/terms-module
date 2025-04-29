@@ -1,11 +1,27 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
-  imports: [],
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
+  username: string = '';
+  password: string = '';
 
+  constructor(private authService: AuthService, private router: Router) {}
+
+  login(): void {
+    if (this.authService.login(this.username, this.password)) {
+      console.log('Login bem-sucedido! Redirecionando para a página de termos...');
+      this.router.navigate(['/terms']);
+    } else {
+      console.error('Credenciais inválidas!');
+    }
+  }
 }
