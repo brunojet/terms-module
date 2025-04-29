@@ -6,4 +6,9 @@ import { Injectable } from '@angular/core';
 export class TermsService {
 
   constructor() { }
+
+  acceptTerms(): void {
+    // Simulação de persistência de aceitação de termos
+    console.log('Termos aceitos!');
+  }
 }
