@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
   styleUrl: './notice.component.scss'
 })
 export class NoticeComponent {
+  @Input() navigateTo!: (view: string) => void;
+
   logNavigation(): void {
     console.log('Navegando para a página de login...');
   }

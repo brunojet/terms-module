@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<app-notice *ngIf="currentView === 'notice'" [navigateTo]="navigateTo.bind(this)"></app-notice>
+<app-login *ngIf="currentView === 'login'" [navigateTo]="navigateTo.bind(this)"></app-login>
+<div *ngIf="currentView === 'terms'">
+  <app-terms></app-terms>
+</div>
+<!-- Removido o <router-outlet> para desativar o roteador -->
