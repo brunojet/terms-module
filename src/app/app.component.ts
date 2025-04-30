@@ -3,6 +3,7 @@ import { NoticeComponent } from './pages/notice/notice.component';
 import { LoginComponent } from './pages/login/login.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { CommonModule } from '@angular/common';
+import { NavigationService } from './services/navigation.service';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +13,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'terms-module';
-  currentView: string = 'notice';
+  constructor(private navigationService: NavigationService) {}
+
+  get currentView(): string {
+    return this.navigationService.getCurrentView();
+  }
 
   navigateTo(view: string): void {
-    this.currentView = view;
+    this.navigationService.navigateTo(view);
   }
 }

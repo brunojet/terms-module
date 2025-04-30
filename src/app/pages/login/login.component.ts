@@ -1,6 +1,5 @@
-import { Router } from '@angular/router';
-import { Component, Input } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
+import { Component } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -11,17 +10,15 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  @Input() navigateTo!: (view: string) => void;
-
   username: string = '';
   password: string = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private navigationService: NavigationService) {}
 
   login(): void {
-    if (this.authService.login(this.username, this.password)) {
+    if (this.username === 'dev' && this.password === 'dev') {
       console.log('Login bem-sucedido! Redirecionando para a página de termos...');
-      this.navigateTo('terms');
+      this.navigationService.navigateTo('terms');
     } else {
       console.error('Credenciais inválidas!');
     }

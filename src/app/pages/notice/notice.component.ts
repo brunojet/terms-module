@@ -1,17 +1,17 @@
-import { Component, Input } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavigationService } from '../../services/navigation.service';
 
 @Component({
   selector: 'app-notice',
   standalone: true,
-  imports: [RouterModule],
+  imports: [],
   templateUrl: './notice.component.html',
   styleUrl: './notice.component.scss'
 })
 export class NoticeComponent {
-  @Input() navigateTo!: (view: string) => void;
+  constructor(private navigationService: NavigationService) {}
 
-  logNavigation(): void {
-    console.log('Navegando para a página de login...');
+  navigateTo(view: string): void {
+    this.navigationService.navigateTo(view);
   }
 }

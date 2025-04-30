@@ -38,3 +38,11 @@ Essa abordagem permite maior flexibilidade e integração com sistemas externos,
 
 ## Integração com ServiceNow
 O bundle gerado será configurado para ser importado e utilizado no ambiente do ServiceNow. Ele será responsável por gerenciar a jornada do usuário descrita acima, garantindo a conformidade com os requisitos de autenticação e aceitação de termos.
+
+## Atualização: Navegação e Integração com ServiceNow
+
+### Navegação com URL Fixa
+A navegação foi ajustada para manter a URL fixa no navegador, sem expor os paths. Isso foi implementado utilizando um único path no roteador (`''`) e gerenciando a navegação internamente com estados no `AppComponent`. Essa abordagem foi escolhida para atender a requisitos específicos de privacidade e simplicidade visual.
+
+### Integração com ServiceNow
+Para integrar o projeto ao ServiceNow, os arquivos gerados no build (como `main.js` e `polyfills.js`) podem ser carregados como **UI Scripts** no ServiceNow. Além disso, o widget do ServiceNow pode ser configurado para carregar esses scripts e renderizar o aplicativo Angular dentro de um portal.
