@@ -31,10 +31,10 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "styles": [],
+            "scripts": [],
+            "optimization": true,
+            "outputHashing": "none"
           },
           "configurations": {
             "production": {
