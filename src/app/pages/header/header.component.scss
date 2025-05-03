@@ -1,0 +1,28 @@
+header {
+  width: 100%; // Faz o header ocupar toda a largura da tela
+  background-color: #ff6600; // Cor laranja da RedeCard
+  padding: 0; // Remove qualquer padding que possa causar espaços em branco
+}
+
+header .container {
+  max-width: 1024px; // Limita o conteúdo a 1024px
+  margin: 0 auto; // Centraliza o container
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+}
+
+header img {
+  height: 50px;
+  position: absolute;
+  left: 10px; // Alinha o logo à esquerda
+  top: 50%;
+  transform: translateY(-50%); // Centraliza verticalmente o logo
+}
+
+header .header-text {
+  margin: 0 auto; // Garante que o texto fique centralizado horizontalmente
+  color: white;
+  font-size: 1.2rem;
+}

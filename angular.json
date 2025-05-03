@@ -31,7 +31,9 @@
                 "input": "public"
               }
             ],
-            "styles": [],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
             "optimization": true,
             "outputHashing": "none"

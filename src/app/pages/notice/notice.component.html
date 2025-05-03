@@ -1,4 +1,19 @@
-<h1>Bem-vindo!</h1>
-<p>Você precisa aceitar os termos para continuar. Por favor, faça login.</p>
-<a (click)="navigateTo('login')" style="color: blue; text-decoration: underline; cursor: pointer;">Ir para Login</a>
-<p>notice works!</p>
+<main class="notice-content">
+    <h2>Bem-vindo à Laranjinha Store!</h2>
+    <p>
+        Estamos comprometidos em oferecer uma experiência segura e transparente para você. Por isso, em breve será necessário aceitar os nossos Termos de Uso para continuar acessando a loja.
+    </p>
+    <p>
+        Esses termos foram criados para proteger seus direitos e garantir um ambiente confiável para todos os nossos clientes. Ao aceitá-los, você estará contribuindo para uma comunidade mais segura e responsável.
+    </p>
+    <p>
+        Não se preocupe, você ainda pode acessar a loja por enquanto, mas lembre-se: em breve, o aceite será obrigatório.
+    </p>
+    <p>
+        Agradecemos pela sua confiança e por fazer parte da nossa comunidade. Aproveite ao máximo sua experiência na Laranjinha Store!
+    </p>
+    <div class="buttons-container">
+        <button class="button button-secondary" (click)="navigateTo('/')">Mais tarde</button>
+        <button class="button button-primary" (click)="navigateTo('login')">Login</button>
+    </div>
+</main>

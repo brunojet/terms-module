@@ -1,6 +1,9 @@
+<app-header></app-header>
+<div class="content-container">
 <app-notice *ngIf="currentView === 'notice'"></app-notice>
 <app-login *ngIf="currentView === 'login'"></app-login>
 <div *ngIf="currentView === 'terms'">
   <app-terms></app-terms>
+</div>
 </div>
 <!-- Removido o <router-outlet> para desativar o roteador -->

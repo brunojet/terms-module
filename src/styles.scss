@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global styles for consistent design */
+:root {
+  --primary-color: #2196f3;
+  --primary-color-hover: #1976d2;
+  --text-color-light: white;
+  --text-color-dark: #333;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto; // Centraliza o conteúdo
+  background-color: #f9f9f9;
+  color: var(--text-color-dark);
+}
+
+button {
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; // Garante que os botões ocupem o mesmo tamanho
+  max-width: 200px; // Define um tamanho máximo para os botões
+}
+
+.button-primary {
+  background-color: #ff6600; // Fundo laranja da RedeCard
+  color: white;
+  border: none;
+}
+
+.button-primary:hover {
+  background-color: #ff8533; // Laranja mais claro ao passar o mouse
+}
+
+.button-secondary {
+  background-color: transparent;
+  color: #ff6600; // Cor laranja da RedeCard
+  border: 1px solid #ff6600; // Borda laranja
+}
+
+.button-secondary:hover {
+  background-color: #f2f2f2; // Cinza claro ao passar o mouse
+  color: #ff6600; // Mantém o texto laranja
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; // Alinha o conteúdo próximo ao topo
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto; // Centraliza horizontalmente
+    height: 100vh; // Garante que ocupe a altura total da janela
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between; // Garante que os botões fiquem lado a lado
+    margin-top: 20px;
+}

@@ -1,11 +1,17 @@
-<h1>Login</h1>
-<p>Por favor, insira suas credenciais para continuar.</p>
-<form (ngSubmit)="login()" #loginForm="ngForm" novalidate>
-  <label for="username">Usuário:</label>
-  <input id="username" type="text" [(ngModel)]="username" name="username" required autocomplete="username" />
+<div class="login-container">
+  <header class="login-header">
+    <h1>Bem-vindo de volta!</h1>
+    <p>Por favor, insira suas credenciais para continuar.</p>
+  </header>
+  <main class="login-content">
+    <form (ngSubmit)="login()" #loginForm="ngForm" novalidate>
+      <label for="username">Usuário:</label>
+      <input id="username" type="text" [(ngModel)]="username" name="username" required autocomplete="username" />
 
-  <label for="password">Senha:</label>
-  <input id="password" type="password" [(ngModel)]="password" name="password" required autocomplete="current-password" />
+      <label for="password">Senha:</label>
+      <input id="password" type="password" [(ngModel)]="password" name="password" required autocomplete="current-password" />
 
-  <button type="submit">Entrar</button>
-</form>
+      <button class="primary-button" type="submit">Entrar</button>
+    </form>
+  </main>
+</div>
