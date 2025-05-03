@@ -72,6 +72,7 @@ button:hover {
     align-items: center;
     justify-content: flex-start; // Alinha o conteúdo próximo ao topo
     padding: 20px;
+    min-width: 320px;
     max-width: 800px;
     margin: 0 auto; // Centraliza horizontalmente
     height: 100vh; // Garante que ocupe a altura total da janela

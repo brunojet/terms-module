@@ -1,17 +1,19 @@
-<div class="login-container">
-  <header class="login-header">
-    <h1>Bem-vindo de volta!</h1>
-    <p>Por favor, insira suas credenciais para continuar.</p>
-  </header>
-  <main class="login-content">
-    <form (ngSubmit)="login()" #loginForm="ngForm" novalidate>
-      <label for="username">Usuário:</label>
-      <input id="username" type="text" [(ngModel)]="username" name="username" required autocomplete="username" />
+<main class="login-content">
+  <h2>Acesse a Laranjinha Store</h2>
+  <form (ngSubmit)="login()" #loginForm="ngForm" novalidate>
+    <label for="email">e-mail</label>
+    <input id="email" type="email" [(ngModel)]="email" name="email" required autocomplete="email" />
 
-      <label for="password">Senha:</label>
-      <input id="password" type="password" [(ngModel)]="password" name="password" required autocomplete="current-password" />
+    <label for="password">senha</label>
+    <input id="password" type="password" [(ngModel)]="password" name="password" required autocomplete="current-password" />
 
-      <button class="primary-button" type="submit">Entrar</button>
-    </form>
-  </main>
-</div>
+    <div class="buttons-container">
+      <button class="button button-secondary" (click)="navigateTo('notice')">Mais tarde</button>
+      <button class="button button-primary" type="submit" [disabled]="!isFormValid">entrar</button>
+    </div>
+  </form>
+  <div class="login-links">
+    <a href="/forgot-password">esqueci a minha senha</a>
+    <a href="/register">ainda não tem uma conta? cadastre-se</a>
+  </div>
+</main>
