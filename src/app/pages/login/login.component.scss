@@ -1,52 +1,48 @@
 @use '../../../styles' as *;
 
-// .login-content {
-//   text-align: center;
-//   min-width: 320px;
-//   max-width: 800px;
-// }
-
-.login-content label {
-  display: block;
-  text-align: left; // Alinha o texto à esquerda
-  margin-bottom: 5px;
-  font-weight: bold;
+.login-content {
+    text-align: center;
 }
 
-.login-content input {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  text-align: left; // Garante que o texto digitado também fique alinhado à esquerda
+.input-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.login-content form {
-  width: 100%; // Garante que o formulário ocupe toda a largura do container
+.input-container label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.input-container input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: left;
 }
 
 .login-links {
-  text-align: center;
-  margin-top: 15px;
+    text-align: center;
+    margin-top: 15px;
 }
 
 .login-links a {
-  display: block;
-  color: #007bff;
-  text-decoration: none;
-  margin: 5px 0;
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin: 5px 0;
 }
 
 .login-links a:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 800px) {
-  .login-content {
-    width: 100%; // Ajusta para ocupar toda a largura da tela em dispositivos pequenos
-    padding: 10px; // Adiciona espaçamento interno
-  }
+    text-decoration: underline;
 }

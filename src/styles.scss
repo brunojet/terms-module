@@ -23,6 +23,11 @@ button:hover {
   opacity: 0.9;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .header {
   background-color: var(--primary-color);
   color: var(--text-color-light);
@@ -67,19 +72,18 @@ button:hover {
 }
 
 .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; // Alinha o conteúdo próximo ao topo
-    padding: 20px;
-    min-width: 320px;
-    max-width: 800px;
-    margin: 0 auto; // Centraliza horizontalmente
-    height: 100vh; // Garante que ocupe a altura total da janela
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; // Garante que os filhos ocupem toda a largura
+  justify-content: flex-start;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .buttons-container {
-    display: flex;
-    justify-content: space-between; // Garante que os botões fiquem lado a lado
-    margin-top: 20px;
+  display: flex;
+  justify-content: space-between; // Garante que os botões fiquem lado a lado
+  margin-top: 20px;
 }

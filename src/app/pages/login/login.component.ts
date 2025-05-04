@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -13,9 +14,17 @@ export class LoginComponent {
   email: string = '';
   password: string = '';
 
-  get isFormValid(): boolean {
+  get isEmailValid(): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valida formato de e-mail
-    return emailRegex.test(this.email) && this.password.length >= 8;
+    return emailRegex.test(this.email.trim());
+  }
+
+  get isPasswordValid(): boolean {
+    return this.password.trim().length >= 8; // Senha deve ter pelo menos 8 caracteres
+  }
+
+  get isFormValid(): boolean {
+    return this.isEmailValid && this.isPasswordValid;
   }
 
   constructor(private navigationService: NavigationService) {}
