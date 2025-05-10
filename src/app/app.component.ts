@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NoticeComponent } from './pages/notice/notice.component';
-import { LoginComponent } from './pages/login/login.component';
+import { LogintestComponent } from './pages/logintest/logintest.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { CommonModule } from '@angular/common';
 import { NavigationService } from './services/navigation.service';
@@ -9,7 +9,7 @@ import { HeaderComponent } from "./pages/header/header.component";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, NoticeComponent, LoginComponent, TermsComponent, HeaderComponent],
+  imports: [CommonModule, NoticeComponent, LogintestComponent, TermsComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
