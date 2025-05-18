@@ -10,5 +10,8 @@
     [class.invalid]="!isValid" 
     [placeholder]="placeholder"
   />
-  <div *ngIf="!isValid && !isFocused" class="error-message">{{ errorMessage }}</div>
+  <div *ngIf="!isValid && !isFocused" class="error-message">
+    <span class="error-icon" aria-hidden="true">&#9888;</span>
+    {{ errorMessage }}
+  </div>
 </div>
