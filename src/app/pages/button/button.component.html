@@ -1,0 +1,14 @@
+<div class="input-container">
+  <label *ngIf="isEmailFocused || email" [class.focused]="isEmailFocused || email" [class.invalid]="!isEmailValid">e-mail</label>
+  <input 
+    type="email" 
+    [(ngModel)]="email" 
+    (focus)="onFocus()" 
+    (blur)="onBlur()"
+    (input)="onInput()"
+    [class.focused]="isEmailFocused" 
+    [class.invalid]="!isEmailValid" 
+    placeholder="e-mail"
+  />
+  <div *ngIf="!isEmailValid && !isEmailFocused" class="error-message">o campo de email deve ser valido</div>
+</div>
