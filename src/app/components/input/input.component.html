@@ -1,0 +1,14 @@
+<div class="input-container">
+  <label *ngIf="isFocused || value" [class.focused]="isFocused || value" [class.invalid]="!isValid">{{ placeholder }}</label>
+  <input 
+    [type]="type" 
+    [(ngModel)]="value" 
+    (focus)="onFocus()" 
+    (blur)="onBlur()"
+    (input)="onInput()"
+    [class.focused]="isFocused" 
+    [class.invalid]="!isValid" 
+    [placeholder]="placeholder"
+  />
+  <div *ngIf="!isValid && !isFocused" class="error-message">{{ errorMessage }}</div>
+</div>

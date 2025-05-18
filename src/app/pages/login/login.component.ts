@@ -2,29 +2,26 @@ import { Component } from '@angular/core';
 import { NavigationService } from '../../services/navigation.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { EmailInputComponent } from '../../components/email-input/email-input.component';
+import { PasswordInputComponent } from '../../components/password-input/password-input.component';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, EmailInputComponent, PasswordInputComponent],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
   email: string = '';
   password: string = '';
-
-  get isEmailValid(): boolean {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valida formato de e-mail
-    return emailRegex.test(this.email.trim());
-  }
 
   get isPasswordValid(): boolean {
     return this.password.trim().length >= 8; // Senha deve ter pelo menos 8 caracteres
   }
 
   get isFormValid(): boolean {
-    return this.isEmailValid && this.isPasswordValid;
+    return this.email.trim().length > 0 && this.isPasswordValid; // Considera o campo de e-mail válido se não estiver vazio
   }
 
   constructor(private navigationService: NavigationService) {}

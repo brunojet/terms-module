@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="content-container">
 <app-notice *ngIf="currentView === 'notice'"></app-notice>
-<app-button *ngIf="currentView === 'button'"></app-button>
+<app-login *ngIf="currentView === 'login'"></app-login>
 <div *ngIf="currentView === 'terms'">
   <app-terms></app-terms>
 </div>
