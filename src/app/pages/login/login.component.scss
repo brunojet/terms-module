@@ -4,33 +4,6 @@
     text-align: center;
 }
 
-.input-container {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input-container label {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-.input-container input {
-    display: block;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    text-align: left;
-}
-
 .login-links {
     text-align: center;
     margin-top: 15px;

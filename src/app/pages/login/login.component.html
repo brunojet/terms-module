@@ -1,10 +1,8 @@
 <main class="login-content">
   <h2>Acesse a Laranjinha Store</h2>
   <form (ngSubmit)="login()" #loginForm="ngForm" novalidate>
-    <div class="input-container">
-      <app-email-input [(email)]="email"></app-email-input>
-      <app-password-input [(password)]="password"></app-password-input>
-    </div>
+    <app-email-input [(email)]="email"></app-email-input>
+    <app-password-input [(password)]="password"></app-password-input>
 
     <div class="buttons-container">
       <button class="button button-secondary" (click)="navigateTo('notice')">Mais tarde</button>

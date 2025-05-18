@@ -18,8 +18,15 @@ import { CommonModule } from '@angular/common';
           (valueChange)="passwordChange.emit($event)"
         ></app-input>
         <button type="button" class="toggle-password" (click)="toggleShowPassword()" tabindex="-1">
-          <span *ngIf="showPassword">🙈</span>
-          <span *ngIf="!showPassword">👁️</span>
+          <!-- Minimalist eye icons using SVG -->
+          <svg *ngIf="!showPassword" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <ellipse cx="10" cy="10" rx="7" ry="4" stroke="#555" stroke-width="1.5"/>
+            <circle cx="10" cy="10" r="1.5" fill="#555"/>
+          </svg>
+          <svg *ngIf="showPassword" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <ellipse cx="10" cy="10" rx="7" ry="4" stroke="#555" stroke-width="1.5"/>
+            <line x1="5" y1="15" x2="15" y2="5" stroke="#555" stroke-width="1.5"/>
+          </svg>
           <span class="toggle-text">{{ showPassword ? 'ocultar a senha' : 'exibir a senha' }}</span>
         </button>
       </div>
